@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Trang chủ</title>
+        <!-- embed font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- styles -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <!-- left -->
+                    <div class="header__left">
+                        <a href="index.html" class="header__left-link">
+                            <img src="./assets/img/amazon-logo-white.png" alt="" class="header__icon" />
+                        </a>
+                    </div>
+                    <!-- middle -->
+                    <div class="header__middle">
+                        <input type="text" class="header__middle-input js-input-amazon" placeholder="Search" />
+                        <button class="header__middle-button js-btn-amazon">
+                            <img src="./assets/icon/search-icon.png" alt="" class="header__middle-icon" />
+                        </button>
+                    </div>
+                    <!-- right -->
+                    <div class="header__right">
+                        <a href="checkout.html" class="header__right-cart-link">
+                            <img src="./assets/icon/cart-icon.png" alt="" class="header__right-icon" />
+                            <span class="header__right-qtt js-cart-quantity">0</span>
+                            <span class="header__right-text">Cart</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="products-grid js-products-grid"></div>
+            </div>
+            <div class="view-detail-container js-view-detail-container"></div>
+            <div class="overlay js-overlay"></div>
+        </main>
+        <!-- scripts -->
+        <script type="module" src="./scripts/amazon.js"></script>
+    </body>
+</html>

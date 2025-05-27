@@ -1,0 +1,498 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Chung */
+.container {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.limit-text-to-2-lines {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.button-primary {
+    color: rgb(33, 33, 33);
+    background-color: rgb(255, 216, 20);
+    cursor: pointer;
+    box-shadow: rgba(213, 217, 217, 0.5) 0px 2px 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(252, 210, 0);
+    border-image: initial;
+    border-radius: 8px;
+}
+
+.link-primary {
+    color: rgb(1, 124, 182);
+    cursor: pointer;
+}
+
+select {
+    color: rgb(33, 33, 33);
+    background-color: rgb(240, 240, 240);
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: rgba(213, 217, 217, 0.5) 0px 2px 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(213, 217, 217);
+    border-image: initial;
+    border-radius: 8px;
+    padding: 3px 5px;
+    outline: none;
+}
+
+input[type="number"]:focus {
+    caret-color: transparent;
+}
+/* end chung */
+
+/* trang chu - header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgb(19, 25, 33);
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+}
+
+.header__left {
+    width: 180px;
+}
+
+.header__left-link {
+    display: inline-block;
+    padding: 6px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.header__icon {
+    width: 100px;
+    margin-top: 5px;
+}
+
+.header__middle {
+    display: flex;
+    flex: 1;
+    max-width: 600px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header__middle-input {
+    flex: 1;
+    width: 0;
+    font-size: 1.6rem;
+    height: 38px;
+    padding-left: 15px;
+    border: none;
+    outline: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.header__middle-button {
+    background-color: rgb(254, 189, 105);
+    border: none;
+    width: 45px;
+    height: 38px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.header__middle-icon {
+    height: 22px;
+    margin-left: 2px;
+    margin-top: 3px;
+}
+
+.header__right {
+    flex-shrink: 0;
+}
+
+.header__right-cart-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.header__right-icon {
+    width: 50px;
+}
+
+.header__right-qtt {
+    color: rgb(240, 136, 4);
+    font-size: 1.6rem;
+    font-weight: 700;
+    position: absolute;
+    top: 4px;
+    left: 22px;
+    width: 26px;
+    text-align: center;
+}
+
+.header__right-text {
+    margin-top: 12px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+/* end Trang-chu - header */
+
+/* Trang-chu - products */
+main {
+    margin-top: 70px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.product-container {
+    padding-top: 40px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 6px;
+}
+
+.product-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    margin-bottom: 20px;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.product-name {
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.product-rating-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.product-rating-stars {
+    width: 100px;
+    margin-right: 6px;
+}
+
+.product-rating-count {
+    color: rgb(1, 124, 182);
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+.product-price {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.product-quantity-container {
+    margin-bottom: 17px;
+}
+
+.product-spacer {
+    flex: 1 1 0%;
+}
+
+.view-detail-button + * {
+    margin-top: 10px;
+}
+
+.add-to-cart-button,
+.view-detail-button {
+    width: 100%;
+    padding: 8px;
+    border-radius: 50px;
+}
+
+.view-detail-container {
+    padding: 70px 0;
+    inset: 16% 0;
+    position: fixed;
+    background: #fff;
+    z-index: 2;
+    display: none;
+}
+
+.view-detail-container.show {
+    display: block;
+}
+
+.view-detail-container .container {
+    height: 100%;
+}
+
+.view-detail-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    column-gap: 100px;
+}
+
+.view-detail-img {
+    width: 40%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.view-detail-info {
+    width: 60%;
+}
+
+.view-detail-price {
+    display: inline-block;
+    font-size: 26px;
+}
+
+.close-detail-wrap {
+    position: absolute;
+    top: 36px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.close-detail-btn {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.view-detail-rating-container {
+    margin: 40px 0;
+}
+
+.view-detail-desc {
+    font-size: 20px;
+    margin-top: 26px;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity, visibility;
+    transition-duration: 0.4s;
+}
+
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* end Trang-chu - products  */
+
+/* checkout - header */
+.checkout-header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 100;
+}
+
+.checkout-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    background-color: white;
+}
+
+.checkout-header-logo {
+    width: 100px;
+    margin-top: 12px;
+}
+
+.checkout-header-middle {
+    flex: 1;
+    flex-shrink: 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.checkout-card-number {
+    color: rgb(0, 113, 133);
+}
+
+.checkout-main {
+    margin-top: 140px;
+    margin-bottom: 100px;
+}
+
+.page-title {
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-bottom: 18px;
+}
+
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    column-gap: 12px;
+    align-items: start;
+}
+
+.cart-item-container,
+.payment-summary {
+    border: 1px solid rgb(222, 222, 222);
+    border-radius: 4px;
+    padding: 18px;
+}
+
+.cart-item-container {
+    margin-bottom: 12px;
+}
+
+.cart-item-details-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    column-gap: 40px;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-name {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    color: rgb(177, 39, 4);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.product-quantity .link-primary {
+    margin-left: 3px;
+}
+
+.payment-summary {
+    padding-bottom: 5px;
+}
+
+.payment-summary-title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.payment-summary-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    font-size: 15px;
+    margin-bottom: 9px;
+}
+
+.payment-summary-money {
+    text-align: right;
+}
+
+.total-row {
+    color: rgb(177, 39, 4);
+    font-weight: 700;
+    font-size: 18px;
+    border-top: 1px solid rgb(222, 222, 222);
+    padding-top: 18px;
+}
+
+.place-order-button {
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 8px;
+    margin-top: 11px;
+    margin-bottom: 15px;
+}
+
+.subtotal-row div {
+    padding-top: 9px;
+}
+
+.subtotal-row .payment-summary-money {
+    border-top: 1px solid rgb(222, 222, 222);
+}
+
+.product-increase {
+    width: 40px;
+    height: 20px;
+    padding: 4px;
+    border: 1px solid #111;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.product-quantity {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+}

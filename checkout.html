@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Giỏ hàng</title>
+
+        <!-- styles -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+    </head>
+    <body>
+        <header class="checkout-header">
+            <div class="container">
+                <div class="checkout-header-inner">
+                    <div class="checkout-header-left">
+                        <a href="index.html">
+                            <img src="./assets/img/amazon-logo.png" alt="" class="checkout-header-logo" />
+                        </a>
+                    </div>
+                    <div class="checkout-header-middle">
+                        Checkout <span class="checkout-cart-number js-checkout-cart-item">0</span> items
+                    </div>
+                    <div class="checkout-header-right">
+                        <img src="./assets/icon/checkout-lock-icon.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="checkout-main js-checkout-main">
+            <div class="container">
+                <div class="page-title js-page-title">Review your order</div>
+                <div class="checkout-grid">
+                    <div class="order-summary js-order-summary"></div>
+
+                    <div class="payment-summary js-payment-summary"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- scritps -->
+        <script type="module" src="./scripts/checkout.js"></script>
+    </body>
+</html>
