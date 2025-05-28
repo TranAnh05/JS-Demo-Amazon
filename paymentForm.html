@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Payment</title>
+        <link rel="stylesheet" href="./assets/css/paymentForm.css" />
+    </head>
+    <body>
+        <div class="main">
+            <form action="" method="POST" class="form" id="form-1">
+                <h3 class="heading">Infomation Of Customer</h3>
+
+                <div class="spacer"></div>
+
+                <div class="form-group">
+                    <label for="fullname" class="form-label">Your name</label>
+                    <input
+                        id="fullname"
+                        name="fullname"
+                        type="text"
+                        placeholder="VD: Trần Văn Anh"
+                        class="form-control"
+                    />
+                    <span class="form-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input
+                        id="email"
+                        name="email"
+                        type="text"
+                        placeholder="VD: email@domain.com"
+                        class="form-control"
+                    />
+                    <span class="form-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="fullname" class="form-label">Address</label>
+                    <input
+                        id="address"
+                        name="address"
+                        type="text"
+                        placeholder="VD: 56 Nguyễn Bá Tuyển..."
+                        class="form-control"
+                    />
+                    <span class="form-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="fullname" class="form-label">Phone number</label>
+                    <input id="phone" name="phone" type="tel" placeholder="VD: 0987654321" class="form-control" />
+                    <span class="form-message"></span>
+                </div>
+
+                <button class="form-submit js-form-submit">Gửi đơn hàng</button>
+            </form>
+        </div>
+
+        <script type="module" src="./scripts/paymentForm copy.js"></script>
+    </body>
+</html>

@@ -1,7 +1,6 @@
 import { cart, getQuantity, getItemInCart, makeCartEmpty } from "../../data/cart.js";
 import { getProduct } from "../../data/products.js";
 import { renderOrderSummary } from "./orderSummary.js";
-const isFormSubmitted = localStorage.getItem("isFormSubmitted") === "true";
 
 const checkoutCartItem = document.querySelector(".js-checkout-cart-item");
 
@@ -47,21 +46,16 @@ export function renderPaymentSummary() {
     const paymentSummaryContainer = document.querySelector(".js-payment-summary");
     checkoutCartItem.innerHTML = cartItemTotal;
     paymentSummaryContainer.innerHTML = paymentSummaryHTML;
-    if (cart.length === 0) {
+    if (productPriceTotal === 0) {
         paymentSummaryContainer.remove();
         document.querySelector(".js-page-title").innerText = `Your cart is empty`;
-    } else {
-        document.querySelector(".js-place-order").addEventListener("click", () => {
-            window.location.href = "paymentForm.html";
-        });
     }
 
-    if (isFormSubmitted === true) {
+    document.querySelector(".js-place-order").addEventListener("click", () => {
         makeCartEmpty();
-        paymentSummaryContainer.remove();
-        document.querySelector(".js-page-title").innerText = `Your cart is empty`;
         renderOrderSummary();
+        paymentSummaryContainer.remove();
+        document.querySelector(".js-page-title").innerText = `You have just placed an order successfully!`;
         checkoutCartItem.innerHTML = `0`;
-        localStorage.removeItem("isFormSubmitted");
-    }
+    });
 }
